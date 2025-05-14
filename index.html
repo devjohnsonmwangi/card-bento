@@ -2,77 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
-  <title>Bento grid</title>
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Functional Bento Grid</title>
 </head>
 <body>
-  <div class="container">
-    <div class="social-media inside-div">
-      <p  style="font-size: 42px;margin:24px;line-height: 1;" >
+
+  <button id="themeToggleButton">Toggle Dark/Light Mode</button>
+
+  <div class="bento-grid-container">
+    <div class="bento-item bento-item--social-ai">
+      <p style="font-size: 42px;margin:24px;line-height: 1;">
         Social Media <span style="color: hsl(39, 100%, 71%);">10x</span> Faster with AI
       </p>
-      <img src="./assets/images/illustration-five-stars.webp" alt="5star" class="star-image">
+      <img src="./assets/images/illustration-five-stars.webp" alt="5 stars" class="bento-item__image bento-item__image--stars">
       <p style="margin-top: 4px;margin-bottom: 24px; color: rgb(219, 219, 219);">
         Over 4,000 5-star reviews
       </p>
     </div>
-    <div class="multiple-accounts inside-div">
-      <img src="./assets/images/illustration-multiple-platforms.webp" alt="accounts" class="accounts">
+
+    <div class="bento-item bento-item--multi-platform">
+      <img src="./assets/images/illustration-multiple-platforms.webp" alt="Multiple platforms" class="bento-item__image bento-item__image--platforms">
       <p style="margin: 15px;line-height: 1;  font-size: 22px; font-weight: 500;letter-spacing: -1px;">
         Manage multiple accounts and platforms
       </p>
     </div>
-    <div class="maintain inside-div">
-      <p style=" font-size: 24px; font-weight: 500;margin: 15px;
-                      margin-right: 20px;line-height: 1;letter-spacing: -1px;">
+
+    <div class="bento-item bento-item--consistent-schedule">
+      <p style="font-size: 24px; font-weight: 500;margin: 15px; margin-right: 20px;line-height: 1;letter-spacing: -1px;">
         Maintain a consistent posting schedule
       </p>
-      <img src="./assets/images/illustration-consistent-schedule.webp" alt="schedule" class="schedule-image">
+      <img src="./assets/images/illustration-consistent-schedule.webp" alt="Consistent schedule graphic" class="bento-item__image bento-item__image--schedule-graphic">
     </div>
-    <div class="schedule inside-div">
-      <p style="font-size: 22px;font-weight: 600;margin-bottom: 0px;letter-spacing: -1px;margin-left: 10px;">
+
+    <div class="bento-item bento-item--post-scheduler">
+      <p style="font-size: 22px;font-weight: 600;margin-top:15px; margin-bottom: 0px;letter-spacing: -1px;margin-left: 10px;">
         Schedule to social media.
       </p>
-      <img src="./assets/images/illustration-schedule-posts.webp" alt="schedule-posts" class="schedule-posts-image">
+      <img src="./assets/images/illustration-schedule-posts.webp" alt="Schedule posts UI" class="bento-item__image bento-item__image--scheduler-ui">
       <p style="font-size: 16px;text-align: center;margin: 20px; margin-top: 0px;margin-bottom: 25px; line-height: 1;">
         Optimize post timings to publish content at the perfect time for your audience.
       </p>
     </div>
-    <div class="grow inside-div">
-      <img src="./assets/images/illustration-grow-followers.webp" alt="grow" class="grow-follower-image">
-      <p style="margin: 0px 40px 15px 40px;text-align: center;
-                      font-size: 28px;font-weight: 500;line-height: 1;letter-spacing: -1px;">
+
+    <div class="bento-item bento-item--grow-followers">
+      <img src="./assets/images/illustration-grow-followers.webp" alt="Grow followers chart" class="bento-item__image bento-item__image--growth-chart">
+      <p style="margin: 0px 40px 15px 40px;text-align: center; font-size: 28px;font-weight: 500;line-height: 1;letter-spacing: -1px;">
         Grow followers with non-stop content.
       </p>
     </div>
-    <div class="percentage inside-div">
+
+    <div class="bento-item bento-item--audience-growth-stats">
       <p style="margin: 10px 0 0 15px;font-size: 32px;font-weight: 600;">>56%</p>
       <p style="margin: 0px; margin-left: 15px;">faster audience growth</p>
-      <img src="./assets/images/illustration-audience-growth.webp" alt="growth" class="audience-growth-image">
+      <img src="./assets/images/illustration-audience-growth.webp" alt="Audience growth graph" class="bento-item__image bento-item__image--audience-graph">
     </div>
-    <div class="create inside-div">
+
+    <div class="bento-item bento-item--quick-creation">
       <p style="font-size: 28px;font-weight: 600;margin: 20px 20px 15px 20px;line-height: 1;letter-spacing: -1px;">
         Create and schedule content <span style="font-style: italic; color: hsl(256, 67%, 59%);">quicker</span>
       </p>
-      <img src="./assets/images/illustration-create-post.webp" alt="create" class="create-image">
+      <img src="./assets/images/illustration-create-post.webp" alt="Create post tool" class="bento-item__image bento-item__image--creation-tool">
     </div>
-    <div class="write inside-div">
+
+    <div class="bento-item bento-item--ai-writer">
       <p style="font-size: 28px;font-weight: 600;line-height: 1;letter-spacing: -1px;margin: 20px;">
         Write your content using AI.
       </p>
-      <img src="./assets/images/illustration-ai-content.webp" alt="write" class="write-image">
+      <img src="./assets/images/illustration-ai-content.webp" alt="AI writing interface" class="bento-item__image bento-item__image--ai-writing-interface">
     </div>
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Daniel-Kav/">Daniel kavatha</a>.
-    </footer>
   </div>
+
+  <footer class="site-footer attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/devjohnsonmwangi/" target="_blank" rel="noopener noreferrer">Devjohnsonmwangi</a>.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Bento Item Click Functionality ---
+      const bentoItems = document.querySelectorAll('.bento-item');
+      bentoItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Optional: If you want only one item to be selected at a time
+          // bentoItems.forEach(otherItem => {
+          //   if (otherItem !== item) {
+          //     otherItem.classList.remove('bento-item--selected');
+          //   }
+          // });
+          item.classList.toggle('bento-item--selected');
+        });
+      });
+
+      // --- Dark Mode Toggle Functionality ---
+      const themeToggleButton = document.getElementById('themeToggleButton');
+      const currentTheme = localStorage.getItem('theme');
+
+      // Apply saved theme on load
+      if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggleButton.textContent = 'Switch to Light Mode';
+      } else {
+        themeToggleButton.textContent = 'Switch to Dark Mode';
+      }
+
+      themeToggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        let theme = 'light';
+        if (document.body.classList.contains('dark-mode')) {
+          theme = 'dark';
+          themeToggleButton.textContent = 'Switch to Light Mode';
+        } else {
+          themeToggleButton.textContent = 'Switch to Dark Mode';
+        }
+        localStorage.setItem('theme', theme);
+      });
+    });
+  </script>
 </body>
 </html>
