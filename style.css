@@ -1,0 +1,215 @@
+body {
+  font-family: 'DM Sans';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 250, 250);
+}
+.container {
+  margin: 30px auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 80px; /* Added padding to prevent content from being hidden behind footer */
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas: 
+    "seven one one four"
+    "eight two three four"
+    "eight six five five";
+  }
+  .inside-div {
+    height: 100%;
+    width: 100% !important;
+  }
+  .grow {
+    flex-direction: row !important;
+    p {
+      margin: 10px 10px 10px 0px !important;
+      font-size: 14px;
+      text-align: left !important;
+    }
+  }
+}
+.social-media {
+  color: white;
+  width: 300px;
+  background-color: hsl(256, 67%, 59%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+  grid-area: one;
+}
+.star-image {
+  width: 60%;
+}
+.multiple-accounts {
+  background-color: white;
+  border-radius: 12px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: two;
+}
+.accounts {
+  width: 90%;
+  margin: 10px;
+  border-radius: 10px;
+}
+.maintain {
+  width: 300px;
+  background-color: hsl(39, 100%, 71%);
+  border-radius: 12px;
+  height: 190px;
+  overflow: hidden;
+  grid-area: three;
+}
+.schedule-image {
+  margin-left: 15px;
+  margin-bottom: 0px;
+  width: 60%;
+}
+.schedule {
+  width: 300px;
+  background-color: hsl(254, 88%, 90%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  grid-area: four;
+}
+.schedule-posts-image {
+  margin-left: 10px;
+  width: 90%;
+}
+.grow {
+  width: 300px;
+  background-color: hsl(256, 67%, 59%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  grid-area: five;
+}
+.grow-follower-image {
+  width: 60%;
+  max-width: 200px;
+  margin: 15px;
+}
+.percentage {
+  width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  grid-area: six;
+}
+.audience-growth-image {
+  width: 60%;
+  margin: 15px;
+}
+.create {
+  width: 300px;
+  border-radius: 12px;
+  background-color: hsl(31, 66%, 93%);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  grid-area: seven;
+}
+.create-image {
+  margin: 0px 0px 20px 15px;
+  width: 50%;
+}
+.write {
+  width: 300px;
+  border-radius: 12px;
+  background-color: hsl(39, 100%, 71%);
+  grid-area: eight;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.write-image {
+  margin: 0px 20px 15px 20px;
+  width: 70%;
+}
+footer.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 60px;
+}
+
+footer.attribution a {
+  color: hsl(256, 67%, 59%);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+footer.attribution a:hover {
+  color: hsl(39, 100%, 71%);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  footer.attribution {
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+  }
+
+  .container {
+    padding-bottom: 70px; /* Add padding to prevent content from being hidden behind fixed footer */
+  }
+}
